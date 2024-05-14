@@ -16,8 +16,8 @@ export default function Navbar() {
     <nav className="flex justify-between items-center w-full container p-4 absolute left-0 right-0 mx-auto">
       <Image
         src="https://i.ibb.co/37kdf5k/Frame-1953.png"
-        width={100}
-        height={100}
+        width={200}
+        height={200}
         sizes="100vh"
         alt="Piranti Logo"
         className="ml-3"
@@ -57,7 +57,7 @@ export default function Navbar() {
           Harga
         </Link>
       </div>
-      <div>
+      <div className="hidden lg:flex">
         Login
       </div>
     </nav>

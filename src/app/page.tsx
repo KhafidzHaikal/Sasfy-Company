@@ -7,6 +7,10 @@ import Navbar from "./components/Navbar";
 import { TbChartCircles } from "react-icons/tb";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaCircleCheck } from "react-icons/fa6";
+import { FcIdea } from "react-icons/fc";
+import { ImPriceTags } from "react-icons/im";
+import { RiTimerFlashLine } from "react-icons/ri";
+
 import {
   Carousel,
   CarouselContent,
@@ -29,12 +33,12 @@ export default function Home() {
               Kami di sini untuk Meningkatkan Produktivitas Anda
             </h1>
             <p className="mt-4">
-              Fokus kami untuk memberikan solusi dan inovasi yang akan membuat
-              bisnis Anda menguntungkan dengan keahlian kami dalam pemrograman
-              perangkat lunak khusus dan otomatisasi perangkat lunak.
+              Dedikasi kami memberikan sistem bisnis yang produktif serta
+              inovasi untuk meningkatkan kualitas bisnis anda bersama researcher
+              dan programmer yang ahli dalam solusi digital.
             </p>
             <button className="bg-[#FFC728] rounded-[40px] px-5 py-3 text-white shadow-md mt-7">
-              <Link href={""}>Mulai Sekarang</Link>
+              <Link href={"https://wa.me/+6281911506190"}>Mulai Sekarang</Link>
             </button>
           </div>
           <Image
@@ -61,15 +65,13 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-3 mt-5">
             <div className="shadow-xl p-3 rounded-lg w-full bg-white">
               <div className="flex">
-                <TbChartCircles className="text-4xl rotate-45" />
-                <TbChartCircles className="-ml-5 text-4xl rotate-45" />
+                <RiTimerFlashLine className="text-4xl" />
               </div>
-              <h1 className="font-bold text-xl lg:text-3xl my-6">
-                Lorem Ipsum
-              </h1>
+              <h1 className="font-bold text-xl lg:text-3xl my-6">Efisiensi</h1>
               <p>
-                dolor sit amet consectetur. At venenatis lectus aliquam nunc sed
-                hac sed malesuada. Posuere porta in at nisi elementum non.
+                Komitmen kami menjaga akurasi dan waktu pengerjaan dengan sistem
+                Agile akan memudahkan klien dalam koordinasi dan kerjasama
+                bersama kami.
               </p>
               <button className="rounded-full border-2 p-1 mt-6">
                 <Link href={""}>
@@ -79,15 +81,13 @@ export default function Home() {
             </div>
             <div className="shadow-xl p-3 rounded-lg w-full bg-white">
               <div className="flex">
-                <TbChartCircles className="text-4xl rotate-45" />
-                <TbChartCircles className="-ml-5 text-4xl rotate-45" />
+                <FcIdea className="text-4xl" />
               </div>
-              <h1 className="font-bold text-xl lg:text-3xl my-6">
-                Lorem Ipsum
-              </h1>
+              <h1 className="font-bold text-xl lg:text-3xl my-6">Inovatif</h1>
               <p>
-                dolor sit amet consectetur. At venenatis lectus aliquam nunc sed
-                hac sed malesuada. Posuere porta in at nisi elementum non.
+                Memberikan solusi inovatif terkait permasalahan bisnis untuk
+                membuat sistem terbaik dan efisien untuk bisnis anda. Researcher
+                akan siap memberikan solusi bisnis terbaik.
               </p>
               <button className="rounded-full border-2 p-1 mt-6">
                 <Link href={""}>
@@ -97,15 +97,12 @@ export default function Home() {
             </div>
             <div className="shadow-xl p-3 rounded-xl lg:rounded-tr-[179px] w-full bg-white">
               <div className="flex">
-                <TbChartCircles className="text-4xl rotate-45" />
-                <TbChartCircles className="-ml-5 text-4xl rotate-45" />
+                <ImPriceTags className="text-4xl" />
               </div>
-              <h1 className="font-bold text-xl lg:text-3xl my-6">
-                Lorem Ipsum
-              </h1>
+              <h1 className="font-bold text-xl lg:text-3xl my-6">Terjangkau</h1>
               <p>
-                dolor sit amet consectetur. At venenatis lectus aliquam nunc sed
-                hac sed malesuada. Posuere porta in at nisi elementum non.
+                Menjadi solusi terbaik dengan harga yang terjangkau. Kami
+                percaya kualitas tidak harus hadir dengan harga yang mahal.
               </p>
               <button className="rounded-full border-2 p-1 mt-6">
                 <Link href={""}>
@@ -126,10 +123,10 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:w-3/4 mt-10 mx-auto">
             <div className="shadow-xl rounded-[25px] bg-white p-4">
-              <h1 className="font-bold text-2xl text-[#1A4D2E]">Pemula</h1>
+              <h1 className="font-bold text-2xl text-[#1A4D2E]">UMKKM</h1>
               <p className="my-5">
                 Rp.{" "}
-                <span className="text-4xl font-bold text-[#1A4D2E]">500</span>{" "}
+                <span className="text-4xl font-bold text-[#1A4D2E]">800</span>{" "}
                 Rb/Tahun
               </p>
               <div className="bg-[#FFF9DE] rounded-[25px]">
@@ -161,7 +158,7 @@ export default function Home() {
             <div
               id="rectangle"
               className="shadow-xl rounded-[25px] bg-white p-4 ">
-              <h1 className="font-bold text-2xl text-white">Pro</h1>
+              <h1 className="font-bold text-2xl text-white">Bisnis </h1>
               <p className="my-5 text-white">
                 Rp. <span className="text-4xl font-bold text-white">2.5</span>{" "}
                 Jt/Tahun
@@ -169,10 +166,10 @@ export default function Home() {
               <div className="bg-white rounded-[25px]">
                 <ul>
                   <li className="flex p-3 items-center gap-4 font-medium">
-                    <FaCircleCheck className="text-[#22A39F]" /> 5 Halaman
+                    <FaCircleCheck className="text-[#22A39F]" /> 10 Halaman
                   </li>
                   <li className="flex p-3 items-center gap-4 font-medium">
-                    <FaCircleCheck className="text-[#22A39F]" /> 2 Hari
+                    <FaCircleCheck className="text-[#22A39F]" /> 10 Hari
                     Pengerjaan
                   </li>
                   <li className="flex p-3 items-center gap-4 font-medium">
@@ -193,19 +190,20 @@ export default function Home() {
               </div>
             </div>
             <div className="shadow-xl rounded-[25px] bg-white p-4">
-              <h1 className="font-bold text-2xl text-[#1A4D2E]">Ekstrim</h1>
+              <h1 className="font-bold text-2xl text-[#1A4D2E]">
+                Professional{" "}
+              </h1>
               <p className="my-5">
-                Rp.{" "}
-                <span className="text-4xl font-bold text-[#1A4D2E]">5.5</span>{" "}
+                Rp. <span className="text-4xl font-bold text-[#1A4D2E]">5</span>{" "}
                 Jt/Tahun
               </p>
               <div className="bg-[#FFF9DE] rounded-[25px]">
                 <ul>
                   <li className="flex p-3 items-center gap-4 font-medium">
-                    <FaCircleCheck className="text-[#22A39F]" /> 5 Halaman
+                    <FaCircleCheck className="text-[#22A39F]" /> 10 - 30 Halaman
                   </li>
                   <li className="flex p-3 items-center gap-4 font-medium">
-                    <FaCircleCheck className="text-[#22A39F]" /> 2 Hari
+                    <FaCircleCheck className="text-[#22A39F]" /> 15 Hari
                     Pengerjaan
                   </li>
                   <li className="flex p-3 items-center gap-4 font-medium">
@@ -228,7 +226,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container my-10">
+      {/* <section className="container my-10">
         <h1 className="text-3xl font-bold">
           Apa <span className="text-[#F8C308]">Tanggapan</span> Mereka Tentang
           Kami?
@@ -297,8 +295,8 @@ export default function Home() {
             </CarouselItem>
           </CarouselContent>
         </Carousel>
-      </section>
-      <hr className="bg-[#1A4D2E] mb-7"/>
+      </section> */}
+      <hr className="bg-[#1A4D2E] mb-7" />
       <Footer />
     </main>
   );
