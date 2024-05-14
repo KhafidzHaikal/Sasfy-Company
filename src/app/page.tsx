@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <Navbar />
-      <div className="ellipse-1 w-[250px] xl:w-[30rem] h-[400px] -z-20 absolute lg:left-[60rem]"></div>
+      <div className="ellipse-1 w-[250px] xl:w-[30rem] h-[400px] -z-10 absolute lg:left-[60rem] right-0"></div>
       <div className="ellipse-2 w-[400px] h-[400px] -z-20 absolute left-[-10rem] top-[20rem]"></div>
       <div className="container">
         <section

@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between items-center w-full container p-4 absolute left-0 right-0 mx-auto md:-mt-10 lg:-mt-10">
-      <div className="inline-flex items-center -mt-14 md:mt-0 lg:mt-0 -ml-4">
+      <div className="inline-flex items-center -mt-10 md:mt-0 lg:mt-0 -ml-4 w-[150px]">
         <Image
           src="/images/5.png"
           width={80}

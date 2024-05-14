@@ -115,7 +115,6 @@
 
 .ellipse-1 {
   top: 10rem;
-
   background-color: #FFC728;
   filter: blur(500px);
 
@@ -123,7 +122,7 @@
 
 .ellipse-2 {
   background-color: #4BFF32;
-  filter: blur(1000px);
+  filter: blur(500px);
 
 }
 
