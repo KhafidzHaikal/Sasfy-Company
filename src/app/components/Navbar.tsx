@@ -13,15 +13,25 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full container p-4 absolute left-0 right-0 mx-auto">
-      <Image
-        src="https://i.ibb.co/37kdf5k/Frame-1953.png"
-        width={200}
-        height={200}
-        sizes="100vh"
-        alt="Piranti Logo"
-        className="ml-3"
-      />
+    <nav className="flex justify-between items-center w-full container p-4 absolute left-0 right-0 mx-auto md:-mt-10 lg:-mt-10">
+      <div className="inline-flex items-center -mt-14 md:mt-0 lg:mt-0 -ml-4">
+        <Image
+          src="/images/5.png"
+          width={80}
+          height={80}
+          sizes="100vh"
+          alt="Piranti Logo"
+          className="ml-3"
+        />
+        <Image
+          src="/images/2.png"
+          width={170}
+          height={170}
+          sizes="100vh"
+          alt="Piranti Logo"
+          className="-ml-10"
+        />
+      </div>
       {/* <div className="lg:hidden md:hidden">
         <button
           className="navbar-burger flex items-center text-black p-3 relative -top-4"
@@ -57,9 +67,7 @@ export default function Navbar() {
           Harga
         </Link>
       </div>
-      <div className="hidden lg:flex">
-        Login
-      </div>
+      <div className="hidden lg:flex">Login</div>
     </nav>
   );
 }
