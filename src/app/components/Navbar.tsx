@@ -32,7 +32,7 @@ export default function Navbar() {
           className="-ml-10"
         />
       </div>
-      {/* <div className="lg:hidden md:hidden">
+      <div className="lg:hidden md:hidden">
         <button
           className="navbar-burger flex items-center text-black p-3 relative -top-4"
           onClick={toggleMenu}>
@@ -44,21 +44,23 @@ export default function Navbar() {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
           </svg>
         </button>
-        <div className="absolute shadow-4xl w-full top-20 right-0 p-5 pt-0 border-b z-40">
-          <p className="w-full rounded-xl">
-            <Link
-              className="flex items-center justify-between w-full p-3 mb-1 rounded-sm bg-white text-black"
-              href={"/"}>
-              Home
-            </Link>
-            <Link
-              className="flex items-center justify-between w-full p-3 mb-1 rounded-sm bg-white text-black"
-              href={"/about"}>
-              About
-            </Link>
-          </p>
-        </div>
-      </div> */}
+        {isOpen && (
+          <div className="absolute shadow-4xl w-full top-20 right-0 p-5 pt-0 border-b z-40">
+            <p className="w-full rounded-xl">
+              <Link
+                className="flex items-center justify-between w-full p-3 mb-1 rounded-sm bg-white text-black hover:bg-black hover:text-white"
+                href={"/"}>
+                Beranda
+              </Link>
+              <Link
+                className="flex items-center justify-between w-full p-3 mb-1 rounded-sm bg-white text-black hover:bg-black hover:text-white"
+                href={"/harga"}>
+                Harga
+              </Link>
+            </p>
+          </div>
+        )}
+      </div>
       <div className="hidden md:flex lg:flex gap-7" id="menu-1">
         <Link className="text-xs" href={"/"}>
           Beranda
@@ -67,7 +69,7 @@ export default function Navbar() {
           Harga
         </Link>
       </div>
-      <div className="hidden lg:flex">Login</div>
+      <div className="hidden lg:flex w-[150px]">Login</div>
     </nav>
   );
 }
