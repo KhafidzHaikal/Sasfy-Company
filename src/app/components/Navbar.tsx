@@ -69,7 +69,7 @@ export default function Navbar() {
           Harga
         </Link>
       </div>
-      <div className="hidden lg:flex w-[150px]">Login</div>
+      {/* <div className="hidden lg:flex w-[150px]">Login</div> */}
     </nav>
   );
 }

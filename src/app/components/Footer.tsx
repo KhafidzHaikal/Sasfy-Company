@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -36,17 +38,23 @@ export default function Footer() {
       </div>
       <ul>
         <li className="font-bold">Layanan</li>
-        <li className="text-sm font-regular mt-2">Kontak Kami</li>
-        <li className="text-sm font-regular mt-2">Blog</li>
-        <li className="text-sm font-regular mt-2">Pusat Layanan</li>
+        <li className="text-sm font-regular mt-2 flex items-center">
+          <FaWhatsapp className="mr-2" />
+          <Link href={"https://wa.me/+6281911506190"}>Whatapp</Link>
+        </li>
+        <li className="text-sm font-regular mt-2 flex items-center">
+          <MdEmail className="mr-2"/>
+          virsel@sasfydev.com
+        </li>
       </ul>
       <ul>
         <li className="font-bold">Sumber Daya</li>
-        <li className="text-sm font-regular mt-2">Harga</li>
-        <li className="text-sm font-regular mt-2">FAQ</li>
+        <li className="text-sm font-regular mt-2">
+          <Link href={"/harga"}>Harga</Link>
+        </li>
       </ul>
       <div className="">
-        <h1 className="font-bold text-lg mb-2">
+        <h1 className="font-bold mb-2">
           Tertarik dengan Layanan Kami?
         </h1>
         <div className="group-input w-full flex">

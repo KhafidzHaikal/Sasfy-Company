@@ -151,7 +151,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="rounded-3xl bg-white px-4 py-2 mb-4 w-1/3 shadow-lg">
-                  <Link href={""}>Detail</Link>
+                  <Link href={"https://wa.me/+6281911506190"}>Detail</Link>
                 </button>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="rounded-3xl bg-[#FFB428] text-white px-4 py-2 mb-4 w-1/3 shadow-lg">
-                  <Link href={""}>Detail</Link>
+                  <Link href={"https://wa.me/+6281911506190"}>Detail</Link>
                 </button>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="rounded-3xl bg-white px-4 py-2 mb-4 w-1/3 shadow-lg">
-                  <Link href={""}>Detail</Link>
+                  <Link href={"https://wa.me/+6281911506190"}>Detail</Link>
                 </button>
               </div>
             </div>

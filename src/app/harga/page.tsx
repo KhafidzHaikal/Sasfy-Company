@@ -4,17 +4,52 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { MdOutlineWorkspacePremium } from "react-icons/md";
+import { RiSecurePaymentFill } from "react-icons/ri";
+import { FaStore } from "react-icons/fa";
+import { MdDomain, MdAppSettingsAlt } from "react-icons/md";
+import { IoIosApps } from "react-icons/io";
+import { IoShareSocialSharp } from "react-icons/io5";
+import { SiLibreofficewriter } from "react-icons/si";
+import { TiVendorAndroid } from "react-icons/ti";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function page() {
   const [value, setValue] = useState(0);
   const [sum, setSum] = useState(0);
-  const [buttonIsAdding, setButtonIsAdding] = useState(new Array(6).fill(true));
+  // const [buttonIsAdding, setButtonIsAdding] = useState(new Array(6).fill(true));
 
+  // const handleButtonClick = (index: number, increment: number) => {
+  //   if (buttonIsAdding[index]) {
+  //     setValue(value + increment);
+  //     setSum(sum + increment);
+  //   } else {
+  //     setValue(value - increment);
+  //     if (value >= increment) {
+  //       setSum(sum - increment);
+  //     }
+  //   }
+  //   setButtonIsAdding(prevState => {
+  //     const newState = [...prevState];
+  //     newState[index] = !newState[index];
+  //     return newState;
+  //   });
+  // };
+  const [buttonStates, setButtonStates] = useState<{ [key: number]: boolean }>({
+    0: true,
+    1: true,
+    2: true,
+    3: true,
+    4: true,
+    5: true,
+    6: true,
+    7: true,
+    8: true,
+  });
   const handleButtonClick = (index: number, increment: number) => {
-    if (buttonIsAdding[index]) {
+    setButtonStates({ ...buttonStates, [index]: !buttonStates[index] });
+    if (buttonStates[index]) {
       setValue(value + increment);
       setSum(sum + increment);
     } else {
@@ -23,12 +58,19 @@ export default function page() {
         setSum(sum - increment);
       }
     }
-    setButtonIsAdding(prevState => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      return newState;
-    });
   };
+
+  const buttonStyles = {
+    backgroundColor: "#57A44D",
+    color: "white",
+    padding: "4px",
+    borderRadius: "3rem",
+    fontWeight: "semibold",
+    width: "100%",
+  };
+
+  const getButtonBackgroundColor = (index: number) =>
+    buttonStates[index] ? "#57A44D" : "#FF0000";
 
   return (
     <main>
@@ -39,154 +81,232 @@ export default function page() {
           <h1 className="font-bold text-2xl lg:text-4xl flex gap-2 my-4 justify-center">
             Pilih <p className="text-[#57A44D]">Harga</p> Paket
           </h1>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <RiSecurePaymentFill className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  Payment Gateaway
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    2.500.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 md:h-16 lg:h-[3.25rem]">
+                Kami menyediakan fitur pembayaran menggunakan QRIS generated.
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(0, 85000)}>
-                {buttonIsAdding[0] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(0),
+                }}
+                onClick={() => handleButtonClick(0, 2500000)}>
+                {buttonStates[0] ? "Tambah" : "Hapus"}
               </button>
             </div>
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <FaStore className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  E-Commerce
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    6.000.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 h-16">
+                Pembuatan toko online yang komprehensif dan cepat sebagai solusi
+                penjualan serta pemasaran anda.
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(1, 85000)}>
-                {buttonIsAdding[1] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(1),
+                }}
+                onClick={() => handleButtonClick(1, 6000000)}>
+                {buttonStates[1] ? "Tambah" : "Hapus"}
               </button>
             </div>
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <MdDomain className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  Domain & Hosting
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    600.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 h-16">
+                Domain dan hosting untuk aplikasi atau website anda.
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(2, 85000)}>
-                {buttonIsAdding[2] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(3),
+                }}
+                onClick={() => handleButtonClick(3, 600000)}>
+                {buttonStates[3] ? "Tambah" : "Hapus"}
               </button>
             </div>
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <IoIosApps className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  ERP Software
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    30.000.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 h-16">
+                Inovasi digital sebagai efisiensi masalah bisnis anda.
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(3, 85000)}>
-                {buttonIsAdding[3] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(4),
+                }}
+                onClick={() => handleButtonClick(4, 30000000)}>
+                {buttonStates[4] ? "Tambah" : "Hapus"}
               </button>
             </div>
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <IoShareSocialSharp className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  Social Media Management
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    5.000.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
+                Konten Tiktok dan Konten Instagram.
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(4, 85000)}>
-                {buttonIsAdding[4] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(5),
+                }}
+                onClick={() => handleButtonClick(5, 5000000)}>
+                {buttonStates[5] ? "Tambah" : "Hapus"}
               </button>
             </div>
             <div className="shadow-lg p-3 bg-white rounded-xl">
-              <MdOutlineWorkspacePremium className="mx-auto text-3xl text-[#57A44D]" />
+              <SiLibreofficewriter className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between items-center gap-3">
+              <div className="flex justify-between gap-3">
                 <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Hosting Premium
+                  Business Starter
                 </h1>
-                <h2 className="text-md">Rp. 85.000/Bulan</h2>
+                <div className="">
+                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    6.000.000
+                  </p>
+                </div>
               </div>
-              <p className="text-[#949494] text-sm my-3">
-                Kinerja Website menjadi cepat
-              </p>
-              <p className="text-[#949494] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Id donec orci dui
-                pellent esque quam a turpis. Morbi et sem egestas diam. Quis
-                pharetra sed augue et eu consequat dignissim.
+              <p className="text-[#949494] text-[12px] mt-7 h-16">
+                Company Profile, ERP Sederhana, Social Media Profiling,
+                Perlengkapan Administrasi Bisnis (Invoice, Berita Acara,
+                MoU,dll)
               </p>
               <hr className="my-3" />
               <button
-                className="rounded-2xl bg-[#57A44D] w-full p-2 text-white font-semibold"
-                onClick={() => handleButtonClick(5,85000)}>
-                {buttonIsAdding[5] ? "Tambah" : "Hapus"}
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(6),
+                }}
+                onClick={() => handleButtonClick(6, 6000000)}>
+                {buttonStates[6] ? "Tambah" : "Hapus"}
+              </button>
+            </div>
+            <div className="shadow-lg p-3 bg-white rounded-xl">
+              <TiVendorAndroid className="mx-auto text-3xl text-[#57A44D]" />
+              <hr className="my-3" />
+              <div className="flex justify-between gap-3">
+                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                  Android Apps
+                </h1>
+                <div className="">
+                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    10.000.000
+                  </p>
+                </div>
+              </div>
+              <p className="text-[#949494] text-[12px] mt-7 h-16">
+                Android apps untuk kebutuhan bisnis maupun mobilitas yang lebih
+                mudah untuk bisnis anda.
+              </p>
+              <hr className="my-3" />
+              <button
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(7),
+                }}
+                onClick={() => handleButtonClick(7, 10000000)}>
+                {buttonStates[7] ? "Tambah" : "Hapus"}
+              </button>
+            </div>
+            <div className="shadow-lg p-3 bg-white rounded-xl">
+              <MdAppSettingsAlt className="mx-auto text-3xl text-[#57A44D] w-10" />
+              <hr className="my-3" />
+              <div className="flex justify-between gap-3">
+                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                  Paket APPS IOS dan Android
+                </h1>
+                <div className="">
+                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                    20.000.000
+                  </p>
+                </div>
+              </div>
+              <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
+                Aplikasi yang bisa digunakan diseluruh device android maupun
+                IOS.
+              </p>
+              <hr className="my-3" />
+              <button
+                style={{
+                  ...buttonStyles,
+                  backgroundColor: getButtonBackgroundColor(8),
+                }}
+                onClick={() => handleButtonClick(8, 20000000)}>
+                {buttonStates[8] ? "Tambah" : "Hapus"}
               </button>
             </div>
           </div>
           <h1 className="lg:text-right font-medium text-lg lg:text-xl my-10">
-            Estimasi Pembuatan Aplikasi : Rp. <span className="text-[#F6B100] font-bold">{sum}</span>
+            Estimasi Pembuatan Aplikasi : Rp.{" "}
+            <span className="text-[#F6B100] font-bold">{sum}</span>
           </h1>
         </div>
       </section>
