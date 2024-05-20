@@ -72,6 +72,8 @@ export default function page() {
   const getButtonBackgroundColor = (index: number) =>
     buttonStates[index] ? "#57A44D" : "#FF0000";
 
+  const formattedSum = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(sum);
+
   return (
     <main>
       <Navbar />
@@ -304,10 +306,12 @@ export default function page() {
               </button>
             </div>
           </div>
-          <h1 className="lg:text-right font-medium text-lg lg:text-xl my-10">
-            Estimasi Pembuatan Aplikasi : Rp.{" "}
-            <span className="text-[#F6B100] font-bold">{sum}</span>
+        </div>
+        <div className="shadow-lg rounded-xl p-3 bg-white mt-7 flex justify-between w-full">
+          <h1 className="text-md font-normal">
+            Estimasi Harga Aplikasi : 
           </h1>
+            <span className="font-bold"> {formattedSum}</span>
         </div>
       </section>
       <section className="bg-[#E9FFE6] my-20">
