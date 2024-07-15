@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="container grid md:grid-cols-2 lg:xl:grid-cols-4 gap-3 mb-7">
-      <div className="">
+    <footer className="container md:flex justify-between gap-3 mb-7">
+      <div className="w-3/4">
         <div className="inline-flex items-center -mt-14 -mb-14 -ml-4">
           <Image
             src="/images/5.png"
@@ -36,24 +36,27 @@ export default function Footer() {
           <FaTwitter />
         </div>
       </div>
-      <ul>
-        <li className="font-bold">Layanan</li>
-        <li className="text-sm font-regular mt-2 flex items-center">
-          <FaWhatsapp className="mr-2" />
-          <Link href={"https://wa.me/+6281911506190"}>Whatapp</Link>
-        </li>
-        <li className="text-sm font-regular mt-2 flex items-center">
-          <MdEmail className="mr-2"/>
-          virsel@sasfydev.com
-        </li>
-      </ul>
-      <ul>
-        <li className="font-bold">Sumber Daya</li>
-        <li className="text-sm font-regular mt-2">
-          <Link href={"/harga"}>Harga</Link>
-        </li>
-      </ul>
-      <div className="">
+      <div className="grid md:grid-cols-2 gap-8 mt-4 md:mt-0">
+        <ul>
+          <li className="font-bold">Layanan</li>
+          <li className="text-sm font-regular mt-4 flex items-center">
+            <FaWhatsapp className="mr-2" />
+            <Link href={"https://wa.me/+6281911506190"}>Whatapp</Link>
+          </li>
+          <li className="text-sm font-regular mt-2 flex items-center">
+            <MdEmail className="mr-2 md:text-3xl" />
+            <Link href={"support@sasfydev.com"}>support@sasfydev.com</Link>
+            
+          </li>
+        </ul>
+        <ul>
+          <li className="font-bold">Sumber Daya</li>
+          <li className="text-sm font-regular mt-4">
+            <Link href={"/harga"}>Harga</Link>
+          </li>
+        </ul>
+      </div>
+      {/* <div className="">
         <h1 className="font-bold mb-2">
           Tertarik dengan Layanan Kami?
         </h1>
@@ -69,7 +72,7 @@ export default function Footer() {
         <p className="text-[#ababab] text-[10px] mt-2">
           * Setelah email terkirim, kami segera menghubungi anda{" "}
         </p>
-      </div>
+      </div> */}
     </footer>
   );
 }

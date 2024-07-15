@@ -123,7 +123,7 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:w-3/4 mt-10 mx-auto">
             <div className="shadow-xl rounded-[25px] bg-white p-4">
-              <h1 className="font-bold text-2xl text-[#1A4D2E]">UMKKM</h1>
+              <h1 className="font-bold text-2xl text-[#1A4D2E]">UMKM</h1>
               <p className="my-5">
                 Rp.{" "}
                 <span className="text-4xl font-bold text-[#1A4D2E]">800</span>{" "}

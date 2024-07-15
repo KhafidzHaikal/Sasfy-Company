@@ -72,7 +72,10 @@ export default function page() {
   const getButtonBackgroundColor = (index: number) =>
     buttonStates[index] ? "#57A44D" : "#FF0000";
 
-  const formattedSum = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(sum);
+  const formattedSum = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  }).format(sum);
 
   return (
     <main>
@@ -87,20 +90,22 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <RiSecurePaymentFill className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Payment Gateaway
-                </h1>
-                <div className="">
-                  <p className="text-sm">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    2.500.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    Payment Gateaway
+                  </h1>
+                  <div className="">
+                    <p className="text-sm">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      2.500.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 md:h-16 lg:h-[3.25rem]">
+                  Kami menyediakan fitur pembayaran menggunakan QRIS generated.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 md:h-16 lg:h-[3.25rem]">
-                Kami menyediakan fitur pembayaran menggunakan QRIS generated.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -114,21 +119,23 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <FaStore className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  E-Commerce
-                </h1>
-                <div className="">
-                  <p className="text-sm">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    6.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    E-Commerce
+                  </h1>
+                  <div className="">
+                    <p className="text-sm">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      6.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-16">
+                  Pembuatan toko online yang komprehensif dan cepat sebagai
+                  solusi penjualan serta pemasaran anda.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-16">
-                Pembuatan toko online yang komprehensif dan cepat sebagai solusi
-                penjualan serta pemasaran anda.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -142,20 +149,22 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <MdDomain className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Domain & Hosting
-                </h1>
-                <div className="">
-                  <p className="text-sm">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    600.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    Domain & Hosting
+                  </h1>
+                  <div className="">
+                    <p className="text-sm">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      600.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-6 h-16">
+                  Domain dan hosting untuk aplikasi atau website anda.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-16">
-                Domain dan hosting untuk aplikasi atau website anda.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -169,20 +178,22 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <IoIosApps className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  ERP Software
-                </h1>
-                <div className="">
-                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    30.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    ERP Software
+                  </h1>
+                  <div className="">
+                    <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      30.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-16">
+                  Inovasi digital sebagai efisiensi masalah bisnis anda.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-16">
-                Inovasi digital sebagai efisiensi masalah bisnis anda.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -196,20 +207,22 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <IoShareSocialSharp className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Social Media Management
-                </h1>
-                <div className="">
-                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    5.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    Social Media Management
+                  </h1>
+                  <div className="">
+                    <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      5.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
+                  Konten Tiktok dan Konten Instagram.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
-                Konten Tiktok dan Konten Instagram.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -223,22 +236,24 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <SiLibreofficewriter className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Business Starter
-                </h1>
-                <div className="">
-                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    6.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    Business Starter
+                  </h1>
+                  <div className="">
+                    <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      6.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-16">
+                  Company Profile, ERP Sederhana, Social Media Profiling,
+                  Perlengkapan Administrasi Bisnis (Invoice, Berita Acara,
+                  MoU,dll)
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-16">
-                Company Profile, ERP Sederhana, Social Media Profiling,
-                Perlengkapan Administrasi Bisnis (Invoice, Berita Acara,
-                MoU,dll)
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -252,21 +267,23 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <TiVendorAndroid className="mx-auto text-3xl text-[#57A44D]" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Android Apps
-                </h1>
-                <div className="">
-                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    10.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    Android Apps
+                  </h1>
+                  <div className="">
+                    <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      10.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-16">
+                  Android apps untuk kebutuhan bisnis maupun mobilitas yang
+                  lebih mudah untuk bisnis anda.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-16">
-                Android apps untuk kebutuhan bisnis maupun mobilitas yang lebih
-                mudah untuk bisnis anda.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -280,21 +297,23 @@ export default function page() {
             <div className="shadow-lg p-3 bg-white rounded-xl">
               <MdAppSettingsAlt className="mx-auto text-3xl text-[#57A44D] w-10" />
               <hr className="my-3" />
-              <div className="flex justify-between gap-3">
-                <h1 className="font-bold text-[20px] text-[#1A4D2E]">
-                  Paket APPS IOS dan Android
-                </h1>
-                <div className="">
-                  <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
-                  <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
-                    20.000.000
-                  </p>
+              <div className="h-36">
+                <div className="flex justify-between gap-3">
+                  <h1 className="font-bold text-[20px] text-[#1A4D2E]">
+                    IOS & Android
+                  </h1>
+                  <div className="">
+                    <p className="text-sm mt-2 md:mt-0 lg:mt-0">Mulai dari</p>
+                    <p className="text-xl font-bold text-[#57A44D] mt-2 md:mt-0">
+                      20.000.000
+                    </p>
+                  </div>
                 </div>
+                <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
+                  Aplikasi yang bisa digunakan diseluruh device android maupun
+                  IOS.
+                </p>
               </div>
-              <p className="text-[#949494] text-[12px] mt-7 h-[3.25rem]">
-                Aplikasi yang bisa digunakan diseluruh device android maupun
-                IOS.
-              </p>
               <hr className="my-3" />
               <button
                 style={{
@@ -308,10 +327,8 @@ export default function page() {
           </div>
         </div>
         <div className="shadow-lg rounded-xl p-3 bg-white mt-7 flex justify-between w-full">
-          <h1 className="text-md font-normal">
-            Estimasi Harga Aplikasi : 
-          </h1>
-            <span className="font-bold"> {formattedSum}</span>
+          <h1 className="text-md font-normal">Estimasi Harga Aplikasi :</h1>
+          <span className="font-bold"> {formattedSum}</span>
         </div>
       </section>
       <section className="bg-[#E9FFE6] my-20">
@@ -331,87 +348,101 @@ export default function page() {
         </div>
       </section>
       <section className="container my-20">
-        <h1 className="lg:text-[42px] md:text-3xl text-2xl md:leading-[3rem] lg:leading-[4rem] text-center font-bold">
-          Kami Juga Menyediakan <span className="text-[#57A44D]">Template</span>{" "}
+        <h1 className="lg:text-[42px] md:text-3xl text-[#57A44D] text-2xl md:leading-[3rem] lg:leading-[4rem] text-center font-bold">
+          PORTOPOLIO
         </h1>
-        <p className="text-sm lg:text-md text-center mb-7">
-          Hubungi kami untuk lihat lebih banyak Template lainnya.
+        <p className="text-sm lg:text-md text-center mb-8 mt-4">
+          Sasfy perusahaan pembuatan software terdepan, menawarkan berbagai
+          macam solusi perangkat lunak yang dirancang untuk memenuhi kebutuhan
+          bisnis dari berbagai skala.
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div className="shadow-lg bg-white rounded-xl">
-            <Image
-              src="/images/fotograper.png"
-              width={0}
-              height={0}
-              sizes="100vh"
-              alt="Fotographer"
-              className="w-full"
-            />
-            <div className="p-3">
-              <hr className="my-3" />
-              <h1 className="font-bold text-[#1A4D2E] my-3 text-center">
-                Jasa Fotografer
-              </h1>
-              <hr className="my-3" />
-              <div className="flex gap-2">
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Lihat Template
-                </button>
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Beli Sekarang
-                </button>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-5 mt-4">
+          <div className="shadow-lg p-4 bg-white">
+            <h1 className="font-bold text-center text-[24px] mb-4">
+              Registrasi Form Pertamina
+            </h1>
+            <div className="overflow-hidden mx-auto">
+              <Image
+                src={"/images/porto-sasfy-1.png"}
+                width={500}
+                height={500}
+                sizes="100vh"
+                alt="Registrasi Pertamina"
+                className="mx-auto hover:scale-110 duration-500 transition-transform lg:h-72"
+              />
             </div>
+            <p className="mt-4 text-sm">
+              Aplikasi Registration Form Pertamina adalah platform digital untuk
+              mendaftar ke acara atau program yang diselenggarakan oleh
+              Pertamina.
+            </p>
           </div>
-          <div className="shadow-lg bg-white rounded-xl">
-            <Image
-              src="/images/furniture.png"
-              width={0}
-              height={0}
-              sizes="100vh"
-              alt="Furniture"
-              className="w-full"
-            />
-            <div className="p-3">
-              <hr className="my-3" />
-              <h1 className="font-bold text-[#1A4D2E] my-3 text-center">
-                JFurniture
-              </h1>
-              <hr className="my-3" />
-              <div className="flex gap-2">
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Lihat Template
-                </button>
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Beli Sekarang
-                </button>
+          <div className="shadow-lg p-4 bg-white">
+            <h1 className="font-bold text-center text-[24px] mb-4">
+              Sasfy Dev
+            </h1>
+            <Link href={"https://www.sandanggroup.com/sasfy"}>
+              <div className="overflow-hidden mx-auto">
+                <Image
+                  src={"/images/porto-sasfy-3.png"}
+                  width={500}
+                  height={500}
+                  sizes="100vh"
+                  alt="Sasfy Dev"
+                  className="mx-auto hover:scale-110 duration-500 transition-transform lg:h-72"
+                />
               </div>
-            </div>
+            </Link>
+            <p className="mt-4 text-sm">
+              Sasfy perusahaan pembuatan software terkemuka, menawarkan solusi
+              perangkat lunak yang dirancang untuk membantu Anda mencapai tujuan
+              Anda.
+            </p>
           </div>
-          <div className="shadow-lg bg-white rounded-xl">
-            <Image
-              src="/images/Finance.png"
-              width={0}
-              height={0}
-              sizes="100vh"
-              alt="Finansial"
-              className="w-full"
-            />
-            <div className="p-3">
-              <hr className="my-3" />
-              <h1 className="font-bold text-[#1A4D2E] my-3 text-center">
-                Jasa Finansial
-              </h1>
-              <hr className="my-3" />
-              <div className="flex gap-2">
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Lihat Template
-                </button>
-                <button className="rounded-2xl border-2 px-4 py-2 bg-white text-[#57A44D] font-semibold w-full">
-                  Beli Sekarang
-                </button>
+          <div className="shadow-lg p-4 bg-white">
+            <h1 className="font-bold text-center text-[24px] mb-4">
+              Sandang Group Web
+            </h1>
+            <Link href={"https://www.sandanggroup.com/"}>
+              <div className="overflow-hidden mx-auto">
+                <Image
+                  src={"/images/porto-sasfy-5.png"}
+                  width={500}
+                  height={500}
+                  sizes="100vh"
+                  alt="Sandang Group"
+                  className="mx-auto hover:scale-110 duration-500 transition-transform lg:h-72"
+                />
               </div>
-            </div>
+            </Link>
+            <p className="mt-4 text-sm">
+              Sandang Group bukan sekadar perusahaan biasa, kami adalah
+              komunitas kreatif yang menyatukan hasrat mereka untuk menciptakan
+              pengalaman luar biasa bagi Anda.
+            </p>
+          </div>
+          <div className="shadow-lg p-4 bg-white">
+            <h1 className="font-bold text-center text-[24px] mb-4">
+              Plain Habit Web
+            </h1>
+            <Link href={"https://www.sandanggroup.com/plain-habit"}>
+              <div className="overflow-hidden mx-auto">
+                <Image
+                  src={"/images/porto-sasfy-4.png"}
+                  width={500}
+                  height={500}
+                  sizes="100vh"
+                  alt="Plain Habit"
+                  className="mx-auto hover:scale-110 duration-500 transition-transform lg:h-72"
+                />
+              </div>
+            </Link>
+            <p className="mt-4 text-sm">
+              Plain Habit merupakan interpretasi dari gabungan antara
+              kesederhanaan dan kebiasaan. Plain merupakan cerminan dari
+              kesederhanaan namun tetap elegan, sedangkan Habit menunjukkan
+              konsistensi dalam mempertahankan kesederhanaan itu sendiri.
+            </p>
           </div>
         </div>
       </section>
