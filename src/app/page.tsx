@@ -126,8 +126,8 @@ export default function Home() {
               <h1 className="font-bold text-2xl text-[#1A4D2E]">UMKM</h1>
               <p className="my-5">
                 Rp.{" "}
-                <span className="text-4xl font-bold text-[#1A4D2E]">800</span>{" "}
-                Rb/Tahun
+                <span className="text-4xl font-bold text-[#1A4D2E]">5</span>{" "}
+                Jt/Tahun
               </p>
               <div className="bg-[#FFF9DE] rounded-[25px]">
                 <ul>
@@ -160,7 +160,7 @@ export default function Home() {
               className="shadow-xl rounded-[25px] bg-white p-4 ">
               <h1 className="font-bold text-2xl text-white">Bisnis </h1>
               <p className="my-5 text-white">
-                Rp. <span className="text-4xl font-bold text-white">2.5</span>{" "}
+                Rp. <span className="text-4xl font-bold text-white">10</span>{" "}
                 Jt/Tahun
               </p>
               <div className="bg-white rounded-[25px]">
@@ -194,8 +194,7 @@ export default function Home() {
                 Professional{" "}
               </h1>
               <p className="my-5">
-                Rp. <span className="text-4xl font-bold text-[#1A4D2E]">5</span>{" "}
-                Jt/Tahun
+                <span className="text-2xl font-bold underline text-[#1A4D2E]">Price Contact</span>
               </p>
               <div className="bg-[#FFF9DE] rounded-[25px]">
                 <ul>
